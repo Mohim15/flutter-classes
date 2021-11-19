@@ -1,0 +1,76 @@
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter/src/rendering/box.dart';
+
+class Mywidgets extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(),
+        body: Row(
+          children: [Mycard(), Mycard()],
+        ));
+  }
+}
+
+class Mycard extends StatelessWidget {
+  const Mycard({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 226,
+      width: 200,
+      child: Card(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(15))),
+        shadowColor: Colors.blue,
+        elevation: 15,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+                child: Container(
+                  // color: Colors.blue,
+                  alignment: Alignment.center,
+                  child: Image.network(
+                      "https://images.pexels.com/photos/7881483/pexels-photo-7881483.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+                ),
+                height: 120,
+                width: 200),
+            Padding(
+              padding: const EdgeInsets.all(3.0),
+              child: Text(
+                "Chair",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(3.0),
+              child: Text(
+                "This is a chair",
+                style: TextStyle(color: Colors.grey[400]),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(3.0),
+              child: Text(
+                "\$100",
+                style: TextStyle(color: Colors.green),
+              ),
+            ),
+            Container(
+              alignment: Alignment.bottomRight,
+              child: Icon(
+                FontAwesomeIcons.heart,
+                color: Colors.red,
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
