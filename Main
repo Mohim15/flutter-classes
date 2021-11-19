@@ -1,0 +1,24 @@
+import 'package:flutter/material.dart';
+import 'package:fooditem/customWidgets.dart';
+import 'package:fooditem/foodlist.dart';
+import 'package:fooditem/mycard.dart';
+import 'package:fooditem/home_page.dart';
+import 'package:fooditem/mybutton.dart';
+import 'package:fooditem/tfield.dart';
+import 'package:fooditem/List_view.dart';
+import 'class 29.dart';
+import 'responsive.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: ResponsiveVertical(),
+    );
+  }
+}
